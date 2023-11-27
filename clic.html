@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Color Change</title>
+    <style>
+        /* Add some basic styling for buttons */
+        button {
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <button onclick="resetColors()" id="reset">Reset</button>
+    <button onclick="chgColor1()" id="bht1">Test1</button>
+    <button onclick="chgColor2()" id="bht2">Test2</button>
+    <button onclick="chgColor3()" id="bht3">Test3</button>
+    <button onclick="chgColor4()" id="bht4">Test4</button>
+    <button onclick="chgColor5()" id="bht5">Test5</button>
+    <button onclick="chgColor6()" id="bht6">Test6</button>
+    <button onclick="cco_color()" id="bht7">Test7</button>
+    <button onclick="cco_color1()" id="bht8">Test8</button>
+
+    <script>
+        function chgColor1() {
+            document.getElementById('bht1').style.color = "red";
+        }
+
+        function chgColor2() {
+            document.getElementById('bht2').style.color = "green";
+        }
+
+        function chgColor3() {
+            document.getElementById('bht3').style.color = "blue";
+        }
+
+        function chgColor4() {
+            document.getElementById('body').style.backgroundColor = "blue";
+        }
+
+        function chgColor5() {
+            document.getElementById('body').style.backgroundColor = "red";
+        }
+
+        function chgColor6() {
+            document.getElementById('body').style.backgroundColor = "green";
+        }
+
+        let i = 0;
+
+        function cco_color1() {
+            i += Math.random() * 20;
+            document.getElementById('bht8').style.color = "red";
+            document.getElementById('bht8').innerText = i;
+            document.getElementById('bht8').style.backgroundColor = `rgb(${i * 10 % 25},${i * 20 % 255},${i * 30 - 8 % 255})`;
+        }
+
+        setInterval(cco_color1, 200);
+
+        function cco_color() {
+            i += Math.random() * 20;
+            document.getElementById('bht7').style.color = "red";
+            document.getElementById('bht7').innerText = i;
+            document.getElementById('bht7').style.backgroundColor = `rgb(${i * 10 % 25},${i * 20 % 255},${i * 30 - 8 % 255})`;
+        }
+
+        setInterval(cco_color, 200);
+
+        function resetColors() {
+            var button = ['bht1', 'bht2', 'bht3', 'bht4', 'bht5', 'bht6', 'bht7', 'bht8']
+            for (let i = 0; i < button.length; i++) {
+                var currentButton = document.getElementById(button[i])
+                currentButton.style.color = "";
+                currentButton.style.backgroundColor = "";
+            }
+            document.getElementById('body').style.backgroundColor = "";
+        }
+
+        // Assuming angle in radians
+        console.log(Math.sin(Math.PI / 2));  // Output: 1 (sine of 90 degrees)
+        console.log(Math.cos(Math.PI));      // Output: -1 (cosine of 180 degrees)
+        console.log(Math.tan(Math.PI / 4));  // Output: 1 (tangent of 45 degrees)
+
+
+        console.log(Math.min(2, 7, 1)); // Output: 1
+
+    </script>
+
+</body>
+
+</html>

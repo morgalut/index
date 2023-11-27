@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Auto Center</title>
+    <style>
+        /* Add some basic styling for buttons */
+        button {
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <button onclick="moveToCenter()" id="centerButton">Move to Center</button>
+
+    <script>
+        function moveToCenter() {
+            var button = document.getElementById('centerButton');
+            var body = document.getElementById('body');
+
+            var centerX = (body.clientWidth - button.clientWidth) / 2;
+            var centerY = (body.clientHeight - button.clientHeight) / 2;
+
+            button.style.position = 'absolute';
+            button.style.left = centerX + 'px';
+            button.style.top = centerY + 'px';
+        }
+
+        // Automatically move to center every 2 seconds
+        setInterval(moveToCenter, 2000);
+    </script>
+</body>
+
+</html>

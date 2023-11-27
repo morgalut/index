@@ -1,0 +1,18 @@
+
+.h2 {
+  width: 40%; /* Specify the width in pixels or another unit */
+  height: 20px; /* Specify the height in pixels or another unit */
+  box-shadow: 10px 1px 1px rgba(0, 0, 0, 0.5); /* Provide appropriate values for box-shadow */
+  border-radius: 3%; /* Make sure the radius is equal to half of the width for a perfect circle */
+  background-color: rgb(104, 38, 38);
+  color: rgb(180, 61, 61); /* Add a contrasting text color for better visibility */
+  text-align: center; /* Center the text horizontally */
+  line-height: 20px; /* Center the text vertically */
+}
+.h3 {
+  width: 1%;
+     background-color: rgb(181, 107, 17):blue;
+  text-align: ;
+  color: black;
+  font-size: 30px; /* Adjust the font size as needed */
+}
